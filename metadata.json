@@ -1,0 +1,6 @@
+{
+  "name": "Intellitech AI Labs",
+  "description": "Intellitech AI Labs ships production-grade AI agents that work 24/7 across WhatsApp, voice, LinkedIn and custom workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

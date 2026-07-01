@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bark: #17150e;
+  --color-paper-white: #ffffff;
+  --color-bone-mist: #f0f7f6;
+  --color-ash: #e2e2e2;
+  --color-ink: #000000;
+  --color-slate: #333333;
+  --color-charcoal: #0e1011;
+  --color-chartreuse-pop: #cccc25;
+  --color-periwinkle-wash: #9fa6ff;
+  --color-moss: #6c8853;
+  --color-slate-blue: #6883a1;
+  --color-sage: #9ac192;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-classic: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius-lg: 8px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-3xl-2: 40px;
+  --radius-full: 9999px;
+}
+
+body {
+  background-color: var(--color-bone-mist);
+  color: var(--color-bark);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom text hues for light mode */
+:root {
+  --text-hue-periwinkle: #4d53a1;
+  --text-hue-sage: #4c7546;
+  --text-hue-moss: #344a21;
+  --text-hue-slate-blue: #2e4763;
+}
+
+/* Dark theme overrides with luxurious deep palette and elegant dark gradients */
+.dark, :root.dark, html.dark {
+  --color-bark: #f3f4f6;
+  --color-paper-white: #15171c;
+  --color-bone-mist: #0d0e10;
+  --color-ash: #23262f;
+  --color-slate: #949ba6;
+  --color-charcoal: #e5e7eb;
+
+  /* Deep luxury neon-tinted dark gradients */
+  --gradient-periwinkle-start: #1c1d3a;
+  --gradient-periwinkle-end: #121324;
+  --gradient-sage-start: #162414;
+  --gradient-sage-end: #0e160d;
+  --gradient-moss-start: #1a2513;
+  --gradient-moss-end: #0f170c;
+  --gradient-slate-blue-start: #152230;
+  --gradient-slate-blue-end: #0e151e;
+
+  /* Soft glowing text colors inside the dark gradients */
+  --text-hue-periwinkle: #c4c9ff;
+  --text-hue-sage: #c7dec5;
+  --text-hue-moss: #bcd3a5;
+  --text-hue-slate-blue: #bcd1e8;
+}
+
+/* Map text colors to the variables */
+.text-hue-periwinkle { color: var(--text-hue-periwinkle); }
+.text-hue-sage { color: var(--text-hue-sage); }
+.text-hue-moss { color: var(--text-hue-moss); }
+.text-hue-slate-blue { color: var(--text-hue-slate-blue); }
+
+/* Custom scrollbar to match the editorial aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bone-mist);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ash);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate);
+}
+
+/* Editorial Specific Classes with responsive CSS variable gradients */
+.editorial-gradient-periwinkle {
+  background: linear-gradient(135deg, var(--gradient-periwinkle-start, #9fa6ff) 0%, var(--gradient-periwinkle-end, #b3b6e8) 100%);
+}
+
+.editorial-gradient-moss {
+  background: linear-gradient(135deg, var(--gradient-moss-start, #6c8853) 0%, var(--gradient-moss-end, #99ab91) 100%);
+}
+
+.editorial-gradient-slate-blue {
+  background: linear-gradient(135deg, var(--gradient-slate-blue-start, #6883a1) 0%, var(--gradient-slate-blue-end, #97a9b9) 100%);
+}
+
+.editorial-gradient-sage {
+  background: linear-gradient(135deg, var(--gradient-sage-start, #9ac192) 0%, var(--gradient-sage-end, #aec7b0) 100%);
+}
+
+/* Exquisite Editorial Typography spacing rules */
+.heading-display {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+}
+
+.heading-display-classic {
+  font-family: var(--font-classic);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.8;
+}
+
+.heading-editorial {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.subheading-editorial {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.13;
+}
+
+.nav-wide-logo {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
