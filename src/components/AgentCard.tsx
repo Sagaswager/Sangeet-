@@ -115,7 +115,7 @@ export default function AgentCard({ agent, onChatClick, onBookClick }: AgentCard
                 <div className="flex items-center justify-between bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/20 dark:border-emerald-500/30 p-3 rounded-xl">
                   <span className="text-sm font-bold font-sans text-bark">LinkedIn AI Agent</span>
                   <span className="text-xs font-mono font-bold bg-emerald-600 text-white dark:bg-emerald-500 px-2.5 py-1 rounded-full shadow-sm">
-                    ₹3,000 OFF
+                    ₹2,000 OFF
                   </span>
                 </div>
                 {/* Items List */}

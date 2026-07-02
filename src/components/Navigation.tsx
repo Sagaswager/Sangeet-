@@ -45,12 +45,17 @@ export default function Navigation({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo Wordmark - wide tracking is the signature */}
-          <div className="flex-shrink-0 flex items-center">
-            <span 
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="text-[17px] font-sans font-bold tracking-[0.15em] uppercase cursor-pointer text-bark hover:opacity-95 select-none"
-            >
+          {/* Logo - using logo.png alongside text */}
+          <div 
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer hover:opacity-95 select-none"
+          >
+            <img 
+              src="/logo.png" 
+              alt="Logo"
+              className="h-10 w-auto object-contain"
+            />
+            <span className="text-[17px] font-sans font-bold tracking-[0.15em] uppercase text-bark">
               {siteContent.navigation.logo}
             </span>
           </div>
