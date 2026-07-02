@@ -1,6 +1,6 @@
 import React from "react";
 import { Agent } from "../types";
-import { Linkedin, Ticket, MessageSquare, ArrowRight, Bot } from "lucide-react";
+import { Linkedin, Ticket, MessageSquare, ArrowRight, Bot, LogIn, UserPlus } from "lucide-react";
 import { motion } from "motion/react";
 
 interface AgentCardProps {
@@ -81,13 +81,7 @@ export default function AgentCard({ agent, onChatClick, onBookClick }: AgentCard
           <div className="p-3 bg-paper-white rounded-xl shadow-none inline-flex">
             {getAgentIcon(agent.iconName)}
           </div>
-          <span
-            className={`text-[11px] font-mono font-bold px-2.5 py-1 rounded-full border uppercase tracking-wider ${getThemeBadgeClasses(
-              agent.colorTheme
-            )}`}
-          >
-            ACTIVE v3.5
-          </span>
+
         </div>
 
         {/* Card title in 32-40px Bark inside the gradient zone */}
@@ -116,19 +110,49 @@ export default function AgentCard({ agent, onChatClick, onBookClick }: AgentCard
 
           <div className="mb-4 text-left">
             {agent.id === "vouchers" ? (
-              <div className="space-y-1">
-                <div className="text-[14px] font-bold font-sans text-bark tracking-tight leading-snug">
-                  Linkedin AI Agent - Rs. 3000/- OFF
+              <div className="space-y-3">
+                {/* Header Offer Row */}
+                <div className="flex items-center justify-between bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/20 dark:border-emerald-500/30 p-3 rounded-xl">
+                  <span className="text-sm font-bold font-sans text-bark">LinkedIn AI Agent</span>
+                  <span className="text-xs font-mono font-bold bg-emerald-600 text-white dark:bg-emerald-500 px-2.5 py-1 rounded-full shadow-sm">
+                    ₹3,000 OFF
+                  </span>
                 </div>
-                <div className="text-[13px] font-semibold font-sans text-slate tracking-tight leading-snug">
-                  LINKEDIN PREMIUM – ₹1000/Month
-                </div>
-                <div className="text-[13px] font-semibold font-sans text-slate tracking-tight leading-snug">
-                  Sales Navigator Core – ₹2300/Month
+                {/* Items List */}
+                <div className="space-y-2 bg-bone-mist/50 dark:bg-bone-mist/20 p-3 rounded-xl border border-ash">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="font-sans font-medium text-slate">LinkedIn Premium</span>
+                    <span className="font-mono font-semibold text-bark">₹1,000/mo</span>
+                  </div>
+                  <div className="h-[1px] bg-ash" />
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="font-sans font-medium text-slate">Sales Navigator Core</span>
+                    <span className="font-mono font-semibold text-bark">₹2,300/mo</span>
+                  </div>
                 </div>
               </div>
             ) : agent.id === "linkedin" ? (
-              <div className="text-xl font-bold font-sans text-bark tracking-tight">Starting at ₹5,000/month</div>
+              <div className="space-y-3">
+                {/* Header Pricing Row */}
+                <div className="flex items-center justify-between bg-zinc-500/10 dark:bg-zinc-500/15 border border-ash p-3 rounded-xl">
+                  <span className="text-sm font-bold font-sans text-bark">LinkedIn AI Agent</span>
+                  <span className="text-xs font-mono font-bold bg-bark text-paper-white px-2.5 py-1 rounded-full shadow-sm">
+                    ₹5,000/mo
+                  </span>
+                </div>
+                {/* Features List */}
+                <div className="space-y-2 bg-bone-mist/50 dark:bg-bone-mist/20 p-3 rounded-xl border border-ash">
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="font-sans font-medium text-slate">Personalized Outreach</span>
+                    <span className="font-mono font-semibold text-bark">100% Autopilot</span>
+                  </div>
+                  <div className="h-[1px] bg-ash" />
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="font-sans font-medium text-slate">Appointment Setting</span>
+                    <span className="font-mono font-semibold text-bark">Included</span>
+                  </div>
+                </div>
+              </div>
             ) : (
               <div className="text-xl font-bold font-sans text-bark tracking-tight">{agent.price}</div>
             )}
@@ -154,26 +178,24 @@ export default function AgentCard({ agent, onChatClick, onBookClick }: AgentCard
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => {
-                if (agent.id === "linkedin") {
-                  window.open("https://187.127.187.153.sslip.io/dashboard.html", "_blank");
-                } else {
-                  onChatClick(agent.id);
-                }
+                window.open("https://intellitech.187.127.187.153.sslip.io/dashboard.html", "_blank");
               }}
               className="flex items-center justify-center gap-2 bg-bark hover:opacity-90 text-paper-white text-xs font-semibold py-3 px-4 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
             >
-              <MessageSquare className="h-3.5 w-3.5 text-chartreuse-pop animate-pulse" />
-              <span>Try Live</span>
+              <LogIn className="h-3.5 w-3.5 text-chartreuse-pop" />
+              <span>Sign In</span>
             </motion.button>
             
             <motion.button
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              onClick={() => onBookClick(agent.id)}
-              className="flex items-center justify-center gap-1 bg-bone-mist hover:bg-ash/50 text-bark border border-ash text-xs font-semibold py-3 px-4 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
+              onClick={() => {
+                window.open("https://intellitech.187.127.187.153.sslip.io/dashboard.html", "_blank");
+              }}
+              className="flex items-center justify-center gap-1.5 bg-bone-mist hover:bg-ash/50 text-bark border border-ash text-xs font-semibold py-3 px-4 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
             >
-              <span>Book Demo</span>
-              <ArrowRight className="h-3.5 w-3.5 text-slate" />
+              <span>Sign Up</span>
+              <UserPlus className="h-3.5 w-3.5 text-slate" />
             </motion.button>
           </div>
         )}

@@ -10,7 +10,8 @@ import { LegalPage } from "./components/LegalPage";
 import { 
   Bot, Sparkles, Terminal, ArrowRight, ChevronRight, Mail, Phone, MapPin, 
   Plus, Check, TrendingUp, PlusCircle, CheckCircle, HelpCircle, Star, Shield, 
-  Zap, Calendar, Clock, HeartHandshake, RefreshCw
+  Zap, Calendar, Clock, HeartHandshake, RefreshCw, MessageCircle, Mic, Database, 
+  Target, Linkedin
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import TubesBackground from "./components/TubesBackground";
@@ -73,7 +74,7 @@ export default function App() {
       "[LINKEDIN_AGENT] Personalized invitation compiled for VP of Growth at Stripe.",
       "[VOUCHERS_CONCIERGE] Composite calculation complete: Starbucks 15% + coupon hold.",
       "[LINKEDIN_AGENT] Outbound pipeline updated. Checked 14 profiles.",
-      "[SYSTEM] Routing telemetry report toSouth Delhi, Chatarpur office gateway.",
+      "[SYSTEM] Routing telemetry report to South Delhi, Chatarpur office gateway.",
       "[VOUCHERS_CONCIERGE] Curating exclusive 2026 winter deals for Nike store locator.",
       "[LINKEDIN_AGENT] Appointment booked successfully: Friday at 2:00 PM EST.",
       "[SYSTEM] CPU utilization stable. 100% agent operational health.",
@@ -167,6 +168,31 @@ export default function App() {
     } finally {
       setIsConsultSubmitting(false);
     }
+  }
+  // Hero section custom staggered animations
+  const heroContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const heroItemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
+  const heroBgVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 0.9, transition: { duration: 1.5 } }
   };
 
   return (
@@ -202,61 +228,62 @@ export default function App() {
         </AnimatePresence>
 
         {/* HERO SECTION */}
-        <section className="relative overflow-visible py-20 lg:py-28 border-b border-zinc-800 bg-[#0a0a0c]">
-          <TubesBackground className="opacity-90 h-[calc(100%+120px)]" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="relative overflow-hidden min-h-[calc(100vh-120px)] flex items-center justify-center border-b border-zinc-800 bg-[#0a0a0c]">
+          <motion.div
+            variants={heroBgVariants}
+            initial="hidden"
+            animate="visible"
+            className="absolute inset-0 z-0 pointer-events-none"
+          >
+            <TubesBackground className="opacity-90 h-full w-full" />
+          </motion.div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               {/* Text Blocks */}
               <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="lg:col-span-8 lg:col-start-3 flex flex-col items-center text-center"
+                variants={heroContainerVariants}
+                initial="hidden"
+                animate="visible"
+                className="lg:col-span-8 flex flex-col items-start text-left justify-center"
               >
-                <div className="inline-flex items-center gap-2 mb-4">
-                  <span className="text-[13px] font-sans font-medium uppercase tracking-[0.071em] text-zinc-400">
-                    {siteContent.hero.eyebrow}
+                <motion.h1 
+                  variants={heroItemVariants}
+                  className="heading-display text-white text-left max-w-7xl font-medium tracking-tight mb-6 flex flex-col items-start"
+                >
+                  <span className="text-7xl sm:text-9xl lg:text-[120px] font-sans font-black tracking-[-6px] leading-[0.85] text-white uppercase">
+                    GROW
                   </span>
-                </div>
+                  <span className="text-6xl sm:text-8xl lg:text-[100px] font-classic italic tracking-[-3px] leading-[0.9] text-white">
+                    your brand
+                  </span>
+                  <span className="text-2xl sm:text-3xl font-classic italic font-light tracking-wide text-zinc-300 pl-3 my-4">
+                    with
+                  </span>
+                  <span className="text-6xl sm:text-8xl lg:text-[105px] font-classic italic tracking-[-3px] leading-[0.95] text-white">
+                    intelligent agents
+                  </span>
+                </motion.h1>
 
-                <h1 className="heading-display text-4xl sm:text-5xl lg:text-[72px] tracking-[-2.88px] leading-[1.02] text-white mb-6 text-center">
-                  {siteContent.hero.heading}
-                </h1>
-
-                <p className="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl mb-8 font-sans text-center mx-auto">
-                  {siteContent.hero.subheading}
-                </p>
-
-                 {/* Two stacked pill buttons: white first, chartreuse second — never place them side by side */}
-                <div className="flex flex-col gap-3 w-full sm:w-[320px] mx-auto">
+                 {/* Action CTA Button */}
+                <motion.div 
+                  variants={heroItemVariants}
+                  className="w-full sm:w-[280px] mt-4"
+                >
                   <motion.button
                     whileHover={{ scale: 1.03, y: -3 }}
                     whileTap={{ scale: 0.94 }}
                     transition={{ type: "spring", stiffness: 500, damping: 18 }}
                     onClick={() => setIsDemoModalOpen(true)}
-                    className="group bg-white hover:bg-zinc-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] text-black text-center font-medium text-base py-4.5 px-8 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
+                    className="group w-full bg-white hover:bg-zinc-100 hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] text-black text-center font-medium text-base py-4.5 px-8 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
                   >
                     <span className="flex items-center justify-center gap-2">
                       <span>{siteContent.hero.primaryCta.toUpperCase()}</span>
                       <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1.5" />
                     </span>
                   </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.03, y: -3 }}
-                    whileTap={{ scale: 0.94 }}
-                    transition={{ type: "spring", stiffness: 500, damping: 18 }}
-                    onClick={() => {
-                      document.getElementById("agents")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    className="group bg-[#cccc25] hover:bg-[#cccc25]/95 hover:shadow-[0_0_30px_rgba(204,204,37,0.35)] text-black text-center font-medium text-base py-4.5 px-8 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
-                  >
-                    <span className="flex items-center justify-center gap-2">
-                      <span>{siteContent.hero.secondaryCta.toUpperCase()}</span>
-                      <Sparkles className="h-4 w-4 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 text-black/80" />
-                    </span>
-                  </motion.button>
-                </div>
+                </motion.div>
               </motion.div>
 
             </div>
@@ -264,7 +291,7 @@ export default function App() {
         </section>
 
         {/* SPECIALIZED AGENT TEAMS */}
-        <section id="agents" className="py-20 lg:py-28 border-b border-ash bg-paper-white">
+        <section id="agents" className="py-14 lg:py-16 border-b border-ash bg-paper-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Roster Introduction */}
@@ -273,17 +300,11 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto text-center mb-16"
+              className="max-w-3xl mx-auto text-center mb-10 flex flex-col items-center"
             >
-              <span className="text-[13px] font-sans font-medium uppercase tracking-[0.071em] text-bark">
-                {siteContent.agentTeams.eyebrow}
-              </span>
-              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-[40px] tracking-[-1.5px] leading-[1.1] text-bark mt-4">
-                {siteContent.agentTeams.heading}
+              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-[42px] tracking-[-1.5px] leading-[1.05] text-bark">
+                AI Agent <span className="font-classic italic text-slate-blue/90">Teams</span>
               </h2>
-              <p className="text-sm sm:text-base text-slate leading-relaxed mt-3 max-w-xl mx-auto font-sans">
-                {siteContent.agentTeams.subheading}
-              </p>
             </motion.div>
 
             {/* Standard Agent Cards Grid */}
@@ -362,6 +383,23 @@ export default function App() {
             >
               {roadmapItems.map((item) => {
                 const isVoted = votedIds.includes(item.id);
+                const getRoadmapIcon = (name: string) => {
+                  switch (name) {
+                    case "WhatsApp API":
+                      return <MessageCircle className="h-5 w-5 text-emerald-500" />;
+                    case "AI Voice Bots":
+                      return <Mic className="h-5 w-5 text-indigo-500" />;
+                    case "Data Scraper":
+                      return <Database className="h-5 w-5 text-amber-500" />;
+                    case "Lead Generator":
+                      return <Target className="h-5 w-5 text-rose-500" />;
+                    case "LinkedIn AI Agent Pro":
+                      return <Linkedin className="h-5 w-5 text-blue-500" />;
+                    default:
+                      return <Sparkles className="h-5 w-5 text-slate-500" />;
+                  }
+                };
+
                 return (
                   <motion.div
                     key={item.id}
@@ -370,9 +408,15 @@ export default function App() {
                     className="bg-paper-white border border-ash/75 p-6 rounded-[24px] flex flex-col justify-between shadow-none hover:bg-bone-mist/5 transition-shadow"
                   >
                     <div>
-                      <span className="inline-block text-[10px] font-mono font-bold bg-bark text-paper-white px-2.5 py-1 rounded-full mb-4">
-                        {item.tag}
-                      </span>
+                      {/* Icon & Tag Row */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-2 bg-bone-mist/50 dark:bg-zinc-800/40 rounded-xl border border-ash/10 inline-flex">
+                          {getRoadmapIcon(item.name)}
+                        </div>
+                        <span className="inline-block text-[10px] font-mono font-bold bg-bark text-paper-white px-2.5 py-1 rounded-full">
+                          {item.tag}
+                        </span>
+                      </div>
                       <h4 className="text-base font-sans font-semibold text-bark mb-2 leading-snug">{item.name}</h4>
                       <p className="text-xs text-slate leading-relaxed mb-6 font-sans">{item.description}</p>
                     </div>
@@ -407,27 +451,42 @@ export default function App() {
         </section>
 
         {/* WHY CHOOSE US */}
-        <section id="why-us" className="py-20 lg:py-28 border-b border-ash bg-paper-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
+        <section id="why-us" className="py-14 lg:py-16 border-b border-ash bg-paper-white overflow-hidden">
+          
+          {/* Header */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className="max-w-3xl mx-auto text-center mb-16"
+              className="max-w-3xl mx-auto text-center"
             >
-              <span className="text-[13px] font-sans font-medium uppercase tracking-[0.071em] text-bark">
-                WHY INTELLITECH
-              </span>
-              <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-[40px] tracking-[-1.5px] leading-[1.1] text-bark mt-4">
-                {siteContent.whyUs.heading}
+              <h2 className="heading-editorial text-bark flex flex-col items-center gap-2">
+                <span className="text-sm sm:text-base font-mono font-medium tracking-[0.05em] text-slate uppercase opacity-85">
+                  "AI is changing fast in 2026."
+                </span>
+                <span className="text-5xl sm:text-7xl lg:text-[76px] font-sans font-bold tracking-[-3px] leading-[0.98] text-bark mt-2">
+                  Are you?
+                </span>
               </h2>
-              <p className="text-sm sm:text-base text-slate leading-relaxed mt-3 max-w-xl mx-auto font-sans">
-                {siteContent.whyUs.subheading}
-              </p>
             </motion.div>
+          </div>
 
+          {/* Full-bleed Edge-to-Edge Logo Marquee */}
+          <div className="w-full overflow-hidden py-0 bg-transparent mb-14 relative flex gap-0">
+            <div className="animate-marquee flex gap-0 shrink-0">
+              <img src="/ai-logos.png" alt="AI Product Logos" className="h-16 sm:h-20 object-contain shrink-0 opacity-90 dark:opacity-85" />
+              <img src="/ai-logos.png" alt="AI Product Logos" className="h-16 sm:h-20 object-contain shrink-0 opacity-90 dark:opacity-85" />
+            </div>
+            <div className="animate-marquee flex gap-0 shrink-0" aria-hidden="true">
+              <img src="/ai-logos.png" alt="AI Product Logos" className="h-16 sm:h-20 object-contain shrink-0 opacity-90 dark:opacity-85" />
+              <img src="/ai-logos.png" alt="AI Product Logos" className="h-16 sm:h-20 object-contain shrink-0 opacity-90 dark:opacity-85" />
+            </div>
+          </div>
+
+          {/* Bento Grid Containers */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Bento Grid layout */}
             <motion.div 
               initial={{ opacity: 0, y: 35 }}
@@ -711,6 +770,24 @@ export default function App() {
           />
         )}
       </AnimatePresence>
+
+      {/* Floating WhatsApp Widget */}
+      <motion.a
+        href="https://wa.me/919811374477?text=Hi%2C%20I%20want%20to%20know%20more"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 260, damping: 20, delay: 1 }}
+        whileHover={{ scale: 1.1, y: -4 }}
+        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-6 right-6 z-50 p-4 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] transition-colors duration-200 cursor-pointer focus:outline-none flex items-center justify-center border border-white/10"
+        title="Chat with us on WhatsApp"
+      >
+        <svg className="w-6 h-6 fill-white" viewBox="0 0 448 512">
+          <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.7-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+      </motion.a>
 
     </div>
   );
