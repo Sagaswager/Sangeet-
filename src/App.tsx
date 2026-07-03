@@ -543,9 +543,6 @@ export default function App() {
                     <p className="text-base text-slate leading-relaxed font-sans">{point.description}</p>
                   </div>
 
-                  <span className="text-xs font-mono text-slate/60 font-bold uppercase tracking-widest mt-6">
-                    PILLAR 0{index + 1} • INTEL
-                  </span>
                 </motion.div>
               ))}
             </motion.div>
