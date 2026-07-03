@@ -339,7 +339,7 @@ export default function App() {
                   Build
                 </span>
                 <h1 className="text-6xl" style={{ fontFamily: '"Bodoni Moda", serif', fontSize: 'clamp(50px, 11vw, 160px)', lineHeight: 'clamp(50px, 11vw, 160px)', fontWeight: 500, letterSpacing: 'clamp(-6.4px, -0.4vw, -2px)', color: '#FFFFFF', width: 'min(419.85px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'block' }}>
-                  Brands
+                  Brand
                 </h1>
                 <span className="text-sm" style={{ fontFamily: '"Bodoni Moda", serif', fontSize: 'clamp(12px, 1.4vw, 20px)', lineHeight: 'clamp(16px, 2vw, 28px)', fontWeight: 500, letterSpacing: 'clamp(4px, 0.5vw, 8px)', color: '#FFFFFF', width: 'min(70.5px, 100%)', height: 'auto', borderRadius: '0px', marginTop: 'clamp(8px, 1vw, 16px)', marginBottom: 'clamp(-8px, -0.5vw, -4px)', padding: 0, display: 'block' }}>
                   with
@@ -363,7 +363,7 @@ export default function App() {
             <div className="w-full flex flex-col items-center text-center mt-auto space-y-8 z-10">
               
               {/* Subheading: "AI that work 24/7" */}
-              <h2 className="text-2xl sm:text-[32px] lg:text-[36px] text-white font-sans tracking-tight leading-snug">
+              <h2 className="text-2xl sm:text-[32px] lg:text-[29px] text-white font-sans tracking-tight leading-snug">
                 <span className="font-bold">AI</span>
                 <span className="font-normal"> that work 24/7</span>
               </h2>
