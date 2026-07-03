@@ -311,11 +311,11 @@ export default function App() {
             <div className="relative w-full min-h-[380px] lg:min-h-[460px] flex items-center mb-12">
               
               {/* Left block (absolute-left) */}
-              <div className="absolute left-0 z-10 flex flex-col items-start text-left pointer-events-auto">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex flex-col items-start text-left pointer-events-auto">
                 <span className="text-7xl sm:text-[110px] lg:text-[120px] font-classic font-normal leading-[0.85] text-white">
                   Build
                 </span>
-                <span className="text-xl sm:text-[24px] font-classic italic text-zinc-400 tracking-[0.15em] my-2 pl-2">
+                <span className="text-xl sm:text-[24px] font-classic italic text-white tracking-[0.15em] my-2 pl-2">
                   with
                 </span>
                 <span className="text-7xl sm:text-[110px] lg:text-[120px] font-classic font-normal leading-[0.85] text-white">
