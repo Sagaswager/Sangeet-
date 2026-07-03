@@ -308,7 +308,25 @@ export default function App() {
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-between min-h-[calc(100vh-220px)]">
             
             {/* Top row: Left block and Right block overlapping */}
-            <div className="relative w-full flex items-center justify-center mb-12 min-h-[380px] lg:min-h-[460px]">
+            <div 
+              className="relative" 
+              style={{
+                width: '1400px',
+                height: '500px',
+                borderRadius: '0px',
+                margin: 0,
+                padding: 0,
+                fontFamily: 'Inter, sans-serif',
+                fontSize: '16px',
+                lineHeight: '24px',
+                fontWeight: 400,
+                letterSpacing: 'normal',
+                color: '#FFFFFF',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
               
               {/* Centered block */}
               <div className="relative z-10 flex flex-col items-center text-center pointer-events-auto">
