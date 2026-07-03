@@ -350,7 +350,7 @@ export default function App() {
               <div 
                 className="absolute right-0 top-0 bottom-0 flex items-center justify-end select-none pointer-events-none z-0"
                 style={{
-                  transform: 'translateX(clamp(-80px, -5vw, 0px))' // <-- Responsive translate shift
+                  transform: 'translateX(clamp(-180px, -12vw, 0px))' // <-- Responsive translate shift
                 }}
               >
                 <span className="text-[12rem]" style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(120px, 30vw, 448px)', lineHeight: 'clamp(120px, 30vw, 448px)', fontWeight: 500, letterSpacing: 'clamp(-22.4px, -1.5vw, -6px)', color: '#FFFFFF', width: 'min(394.888px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'flex', alignItems: 'center' }}>
