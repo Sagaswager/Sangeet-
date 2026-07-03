@@ -704,7 +704,7 @@ export default function App() {
                     whileTap={{ scale: 0.99 }}
                     type="submit"
                     disabled={isConsultSubmitting}
-                    className="w-full bg-white hover:bg-zinc-100 disabled:opacity-50 text-sm font-semibold py-4.5 px-6 rounded-full shadow-none transition flex items-center justify-center gap-2 cursor-pointer focus:outline-none"
+                    className="w-full bg-bark hover:bg-bark/90 text-paper-white disabled:opacity-50 text-sm font-semibold py-4 px-6 rounded-full shadow-none transition flex items-center justify-center gap-2 cursor-pointer focus:outline-none"
                   >
                     {isConsultSubmitting ? (
                       <>
