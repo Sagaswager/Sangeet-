@@ -335,10 +335,10 @@ export default function App() {
                   transform: 'translateX(clamp(-150px, -10vw, 0px))' // <-- Responsive translate shift
                 }}
               >
-                <span style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(50px, 11vw, 160px)', lineHeight: 'clamp(50px, 11vw, 160px)', fontWeight: 500, letterSpacing: 'clamp(-6.4px, -0.4vw, -2px)', color: '#FFFFFF', width: 'min(414.25px, 100%)', height: 'auto', borderRadius: '0px', display: 'block' }}>
+                <span style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(40px, 11vw, 160px)', lineHeight: 'clamp(40px, 11vw, 160px)', fontWeight: 500, letterSpacing: 'clamp(-6.4px, -0.4vw, -2px)', color: '#FFFFFF', width: 'min(414.25px, 100%)', height: 'auto', borderRadius: '0px', display: 'block' }}>
                   Build
                 </span>
-                <h1 className="text-6xl" style={{ fontFamily: '"Bodoni Moda", serif', fontSize: 'clamp(50px, 11vw, 160px)', lineHeight: 'clamp(50px, 11vw, 160px)', fontWeight: 500, letterSpacing: 'clamp(-6.4px, -0.4vw, -2px)', color: '#FFFFFF', width: 'min(419.85px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'block' }}>
+                <h1 className="text-6xl" style={{ fontFamily: '"Bodoni Moda", serif', fontSize: 'clamp(40px, 11vw, 160px)', lineHeight: 'clamp(40px, 11vw, 160px)', fontWeight: 500, letterSpacing: 'clamp(-6.4px, -0.4vw, -2px)', color: '#FFFFFF', width: 'min(419.85px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'block' }}>
                   Brand
                 </h1>
                 <span className="text-sm" style={{ fontFamily: '"Bodoni Moda", serif', fontSize: 'clamp(12px, 1.4vw, 20px)', lineHeight: 'clamp(16px, 2vw, 28px)', fontWeight: 500, letterSpacing: 'clamp(4px, 0.5vw, 8px)', color: '#FFFFFF', width: 'min(70.5px, 100%)', height: 'auto', borderRadius: '0px', marginTop: 'clamp(8px, 1vw, 16px)', marginBottom: 'clamp(-8px, -0.5vw, -4px)', padding: 0, display: 'block' }}>
@@ -353,7 +353,7 @@ export default function App() {
                   transform: 'translateX(clamp(-180px, -12vw, 0px))' // <-- Responsive translate shift
                 }}
               >
-                <span className="text-[12rem]" style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(120px, 30vw, 448px)', lineHeight: 'clamp(120px, 30vw, 448px)', fontWeight: 500, letterSpacing: 'clamp(-22.4px, -1.5vw, -6px)', color: '#FFFFFF', width: 'min(394.888px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'flex', alignItems: 'center' }}>
+                <span className="text-[12rem]" style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(75px, 30vw, 448px)', lineHeight: 'clamp(75px, 30vw, 448px)', fontWeight: 500, letterSpacing: 'clamp(-22.4px, -1.5vw, -6px)', color: '#FFFFFF', width: 'min(394.888px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'flex', alignItems: 'center' }}>
                   AI
                 </span>
               </div>
