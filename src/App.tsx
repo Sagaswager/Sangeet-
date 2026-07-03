@@ -314,7 +314,7 @@ export default function App() {
                 width: '1400px',
                 height: '500px',
                 borderRadius: '0px',
-                margin: '0 0 0 50px',
+                margin: '0 0 0 15px',
                 padding: 0,
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '16px',
