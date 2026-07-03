@@ -519,7 +519,7 @@ export default function App() {
           </div>
 
           {/* Bento Grid Containers */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Bento Grid layout */}
             <motion.div 
               initial={{ opacity: 0, y: 35 }}
@@ -533,17 +533,17 @@ export default function App() {
                   key={index}
                   whileHover={{ y: -5, scale: 1.01 }}
                   transition={{ duration: 0.2 }}
-                  className="p-8 rounded-[24px] bg-bone-mist/40 border border-ash flex flex-col justify-between hover:bg-bone-mist/10 transition-shadow duration-200 shadow-none"
+                  className="p-10 rounded-[24px] bg-bone-mist/40 border border-ash flex flex-col justify-between hover:bg-bone-mist/10 transition-shadow duration-200 shadow-none"
                 >
                   <div className="mb-6">
-                    <div className="h-10 w-10 rounded-full bg-bark text-chartreuse-pop flex items-center justify-center mb-6 shadow-none">
-                      {index === 0 ? <Zap className="h-5 w-5" /> : index === 1 ? <Shield className="h-5 w-5" /> : <Star className="h-5 w-5" />}
+                    <div className="h-12 w-12 rounded-full bg-bark text-chartreuse-pop flex items-center justify-center mb-6 shadow-none">
+                      {index === 0 ? <Zap className="h-6 w-6" /> : index === 1 ? <Shield className="h-6 w-6" /> : <Star className="h-6 w-6" />}
                     </div>
-                    <h3 className="text-lg font-sans font-semibold text-bark mb-3">{point.title}</h3>
-                    <p className="text-sm text-slate leading-relaxed font-sans">{point.description}</p>
+                    <h3 className="text-xl sm:text-2xl font-sans font-bold text-bark mb-3">{point.title}</h3>
+                    <p className="text-base text-slate leading-relaxed font-sans">{point.description}</p>
                   </div>
 
-                  <span className="text-[10px] font-mono text-slate/60 font-bold uppercase tracking-widest mt-6">
+                  <span className="text-xs font-mono text-slate/60 font-bold uppercase tracking-widest mt-6">
                     PILLAR 0{index + 1} • INTEL
                   </span>
                 </motion.div>
