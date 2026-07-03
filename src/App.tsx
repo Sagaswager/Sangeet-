@@ -127,7 +127,7 @@ export default function App() {
     return (
       <div
         key={`${keyPrefix}-${item.id}`}
-        className="bg-paper-white border border-ash/75 p-7 rounded-[24px] flex flex-col justify-between shadow-none hover:bg-bone-mist/5 transition-shadow w-[320px] sm:w-[360px] shrink-0 text-left"
+        className="bg-paper-white border border-ash/75 p-8 rounded-[24px] flex flex-col justify-between shadow-none hover:bg-bone-mist/5 transition-shadow w-[350px] sm:w-[420px] shrink-0 text-left"
       >
         <div>
           {/* Icon & Tag Row */}
@@ -135,17 +135,17 @@ export default function App() {
             <div className="p-2.5 bg-bone-mist/50 dark:bg-zinc-800/40 rounded-xl border border-ash/10 inline-flex">
               {getRoadmapIcon(item.name)}
             </div>
-            <span className="inline-block text-xs font-mono font-bold bg-bark text-paper-white px-2.5 py-1 rounded-full">
+            <span className="inline-block text-sm font-mono font-bold bg-bark text-paper-white px-2.5 py-1 rounded-full">
               {item.tag}
             </span>
           </div>
-          <h4 className="text-lg font-sans font-semibold text-bark mb-2 leading-snug">{item.name}</h4>
-          <p className="text-sm text-slate leading-relaxed mb-6 font-sans">{item.description}</p>
+          <h4 className="text-xl font-sans font-semibold text-bark mb-2 leading-snug">{item.name}</h4>
+          <p className="text-base text-slate leading-relaxed mb-6 font-sans">{item.description}</p>
         </div>
 
         <div className="border-t border-ash/50 pt-4 flex items-center justify-between mt-auto">
-          <div className="flex items-center gap-1.5 text-sm text-slate font-mono">
-            <TrendingUp className="h-4 w-4 text-sage" />
+          <div className="flex items-center gap-1.5 text-base text-slate font-mono">
+            <TrendingUp className="h-4.5 w-4.5 text-sage" />
             <span>{item.upvotes} votes</span>
           </div>
           
@@ -154,14 +154,14 @@ export default function App() {
             whileTap={{ scale: 0.9 }}
             onClick={() => handleVote(item.id)}
             disabled={isVoted}
-            className={`p-2 rounded-full transition cursor-pointer focus:outline-none ${
+            className={`p-2.5 rounded-full transition cursor-pointer focus:outline-none ${
               isVoted
                 ? "bg-sage/10 text-sage"
                 : "bg-bone-mist hover:bg-ash/40 text-bark"
             }`}
             title={isVoted ? "Upvoted!" : "Upvote Feature"}
           >
-            <Check className="h-4 w-4" />
+            <Check className="h-4.5 w-4.5" />
           </motion.button>
         </div>
       </div>
