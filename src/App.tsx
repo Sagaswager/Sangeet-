@@ -496,8 +496,8 @@ export default function App() {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="heading-editorial flex flex-col items-center gap-3">
-                <span className="text-xl sm:text-2xl lg:text-[28px] font-mono font-bold tracking-[0.02em] text-bark uppercase">
-                  "AI is changing fast in 2026."
+                <span className="text-lg sm:text-xl lg:text-[22px] font-mono font-bold tracking-[0.02em] text-bark uppercase">
+                  AI is changing fast in 2026
                 </span>
                 <span className="text-6xl sm:text-8xl lg:text-[100px] font-sans font-black tracking-[-4px] leading-[0.95] text-bark mt-1">
                   Are you?
