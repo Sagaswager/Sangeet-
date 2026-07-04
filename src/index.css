@@ -152,3 +152,63 @@ body {
   width: max-content;
   animation: marquee 30s linear infinite;
 }
+
+/* Responsive Hero Layout for Build Brand with AI */
+.hero-title-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: clamp(180px, 30vw, 350px);
+}
+
+.hero-left-block {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  pointer-events: auto;
+  width: max-content;
+  max-width: 420px;
+  transform: translateX(clamp(-65px, -10vw, 0px));
+}
+
+.hero-right-block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  width: auto;
+  transform: translateX(clamp(-100px, -12vw, 0px));
+}
+
+@media (min-width: 768px) {
+  .hero-title-container {
+    height: clamp(250px, 35vw, 500px);
+  }
+  
+  .hero-left-block {
+    transform: translateX(clamp(-150px, -10vw, 0px));
+  }
+  
+  .hero-right-block {
+    transform: translateX(clamp(-180px, -12vw, 0px));
+  }
+}
+

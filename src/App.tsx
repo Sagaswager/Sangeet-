@@ -304,35 +304,11 @@ export default function App() {
 
           <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-center min-h-[calc(100vh-220px)] py-8">
 
-            {/* Top row: Left block and Right block overlapping */}
-            <div
-              className="relative w-full max-w-[1400px]"
-              style={{
-                height: 'clamp(250px, 35vw, 500px)',
-                borderRadius: '0px',
-                margin: '0 auto',
-                padding: 0,
-                fontFamily: 'Inter, sans-serif',
-                fontSize: '16px',
-                lineHeight: '24px',
-                fontWeight: 400,
-                letterSpacing: 'normal',
-                color: '#FFFFFF',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                overflow: 'hidden'
-              }}
-            >
+            {/* Top row: Left block and Right block side-by-side, overlapping responsively */}
+            <div className="hero-title-container">
 
               {/* Centered block */}
-              <div 
-                className="relative z-10 flex flex-col items-start text-left pointer-events-auto"
-                style={{
-                  transform: 'translateX(clamp(-150px, -10vw, 0px))', // <-- Responsive translate shift
-                  width: 'min(419.85px, 100%)'
-                }}
-              >
+              <div className="hero-left-block">
                 <span style={{ fontFamily: 'Sora, sans-serif', fontSize: 'clamp(40px, 11vw, 160px)', lineHeight: 'clamp(40px, 11vw, 160px)', fontWeight: 500, letterSpacing: 'clamp(-6.4px, -0.4vw, -2px)', color: '#FFFFFF', width: 'min(414.25px, 100%)', height: 'auto', borderRadius: '0px', display: 'block' }}>
                   Build
                 </span>
@@ -345,12 +321,7 @@ export default function App() {
               </div>
 
               {/* Right block (absolute-right, vertically matching height, top and bottom aligned) */}
-              <div
-                className="absolute right-0 top-0 bottom-0 flex items-center justify-end select-none pointer-events-none z-0"
-                style={{
-                  transform: 'translateX(clamp(-180px, -12vw, 0px))' // <-- Responsive translate shift
-                }}
-              >
+              <div className="hero-right-block">
                 <span className="text-[12rem]" style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(75px, 30vw, 448px)', lineHeight: 'clamp(75px, 30vw, 448px)', fontWeight: 500, letterSpacing: 'clamp(-22.4px, -1.5vw, -6px)', color: '#FFFFFF', width: 'min(394.888px, 100%)', height: 'auto', borderRadius: '0px', margin: 0, padding: 0, display: 'flex', alignItems: 'center' }}>
                   AI
                 </span>
