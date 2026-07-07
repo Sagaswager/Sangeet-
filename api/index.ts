@@ -70,7 +70,7 @@ const consultations: ConsultationRequest[] = [
     id: "c-1",
     name: "Ayush Malhotra",
     email: "ayushmalhotra1703@gmail.com",
-    phone: "+91 93113 74477",
+    phone: "+91 9811734477",
     details: "Bespoke system for regional outbound marketing campaign.",
     createdAt: new Date().toISOString(),
   }

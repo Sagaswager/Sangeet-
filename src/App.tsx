@@ -658,7 +658,7 @@ export default function App() {
                       required
                       value={consultPhone}
                       onChange={(e) => setConsultPhone(e.target.value)}
-                      placeholder="+91 93113 74477"
+                      placeholder="+91 9811734477"
                       className="w-full bg-bone-mist/50 border border-ash/70 rounded-full px-6 py-4 text-base focus:outline-none focus:border-bark text-bark"
                     />
                   </div>
@@ -785,7 +785,7 @@ export default function App() {
 
       {/* Floating WhatsApp Widget */}
       <motion.a
-        href="https://wa.me/919811374477?text=Hi%2C%20I%20want%20to%20know%20more"
+        href="https://wa.me/919811734477?text=Hi%2C%20I%20want%20to%20know%20more"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ scale: 0, opacity: 0 }}

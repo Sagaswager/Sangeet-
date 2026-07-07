@@ -82,7 +82,7 @@ export const siteContent = {
     eyebrow: "Let's connect",
     heading: "Talk to the lab.",
     email: "ayushmalhotra1703@gmail.com",
-    phone: "+91 93113 74477",
+    phone: "+91 9811734477",
     base: "South Delhi, Chatarpur"
   },
   footer: {

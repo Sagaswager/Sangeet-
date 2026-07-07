@@ -163,7 +163,7 @@ export default function DemoModal({
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+91 93113 74477"
+                      placeholder="+91 9811734477"
                       className="w-full bg-bone-mist border border-ash/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-bark"
                     />
                   </div>
