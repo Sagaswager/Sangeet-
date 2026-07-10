@@ -73,7 +73,7 @@ export default function Navigation({
             ))}
 
             <a
-              href="https://intellitech.187.127.187.153.sslip.io/dashboard.html"
+              href="https://intellitechai.duckdns.org/dashboard.html"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[13px] font-sans font-medium uppercase tracking-[0.071em] text-charcoal hover:text-bark hover:underline underline-offset-4 transition duration-150 cursor-pointer flex items-center gap-1.5"
@@ -128,7 +128,7 @@ export default function Navigation({
               ))}
 
               <a
-                href="https://intellitech.187.127.187.153.sslip.io/dashboard.html"
+                href="https://intellitechai.duckdns.org/dashboard.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

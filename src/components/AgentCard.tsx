@@ -178,7 +178,7 @@ export default function AgentCard({ agent, onChatClick, onBookClick }: AgentCard
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => {
-                window.open("https://intellitech.187.127.187.153.sslip.io/dashboard.html", "_blank");
+                window.open("https://intellitechai.duckdns.org/dashboard.html", "_blank");
               }}
               className="flex items-center justify-center gap-2 bg-bark hover:opacity-90 text-paper-white text-sm font-semibold py-3 px-4 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
             >
@@ -190,7 +190,7 @@ export default function AgentCard({ agent, onChatClick, onBookClick }: AgentCard
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => {
-                window.open("https://intellitech.187.127.187.153.sslip.io/dashboard.html", "_blank");
+                window.open("https://intellitechai.duckdns.org/dashboard.html", "_blank");
               }}
               className="flex items-center justify-center gap-1.5 bg-bone-mist hover:bg-ash/50 text-bark border border-ash text-sm font-semibold py-3 px-4 rounded-full transition-all duration-150 cursor-pointer focus:outline-none"
             >
