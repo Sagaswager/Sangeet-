@@ -64,7 +64,7 @@ export default function AdminPanel({ onBookingUpdateTrigger }: AdminPanelProps) 
             Intellitech CRM Database
           </h2>
           <p className="text-xs text-ash/70 mt-1">
-            Ayush Malhotra's administrative lead log sandbox. Active connection via full-stack Express pipeline.
+            Aayush Malhotra's administrative lead log sandbox. Active connection via full-stack Express pipeline.
           </p>
         </div>
 

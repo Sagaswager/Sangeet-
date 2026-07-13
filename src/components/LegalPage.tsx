@@ -66,7 +66,7 @@ export function LegalPage({ pageType, onClose }: LegalPageProps) {
             <section>
               <h3 className="text-lg font-sans font-semibold text-bark mb-3 tracking-tight">5. Contact and Compliance Node</h3>
               <p>
-                For data compliance requests, deletion mandates, or encryption key updates, please contact our lead security coordinator directly at <span className="font-semibold text-bark">ayushmalhotra1703@gmail.com</span>.
+                For data compliance requests, deletion mandates, or encryption key updates, please contact our lead security coordinator directly at <span className="font-semibold text-bark">aayushmalhotra1703@gmail.com</span>.
               </p>
             </section>
           </div>
@@ -100,14 +100,14 @@ export function LegalPage({ pageType, onClose }: LegalPageProps) {
             <section>
               <h3 className="text-lg font-sans font-semibold text-bark mb-3 tracking-tight">3. Cancellation Protocol</h3>
               <p>
-                Subscriptions can be paused, terminated, or adjusted at any point during your active billing billing cycle. To prevent automated renewal billing, cancellations must be registered through your designated lab liaison or emailed directly to <span className="font-semibold text-bark">ayushmalhotra1703@gmail.com</span> at least 3 business days before the next automated renewal sweep.
+                Subscriptions can be paused, terminated, or adjusted at any point during your active billing billing cycle. To prevent automated renewal billing, cancellations must be registered through your designated lab liaison or emailed directly to <span className="font-semibold text-bark">aayushmalhotra1703@gmail.com</span> at least 3 business days before the next automated renewal sweep.
               </p>
             </section>
 
             <section>
               <h3 className="text-lg font-sans font-semibold text-bark mb-3 tracking-tight">4. Processing Timelines</h3>
               <p>
-                Approved refunds are processed immediately and routed back to the original source of corporate funding within 5 to 7 business days, depending on localized banking gateways in South Delhi and international routing networks.
+                Approved refunds are processed immediately and routed back to the original source of corporate funding within 5 to 7 business days, depending on localized banking gateways in South Delhi, Chattarpur and international routing networks.
               </p>
             </section>
           </div>

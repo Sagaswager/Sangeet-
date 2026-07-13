@@ -120,7 +120,7 @@ export default function DemoModal({
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="Ayush Malhotra"
+                      placeholder="Aayush Malhotra"
                       className="w-full bg-bone-mist border border-ash/70 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-bark"
                     />
                   </div>
@@ -229,7 +229,7 @@ export default function DemoModal({
                   Demo Reserved Successfully!
                 </h3>
                 <p className="text-sm text-slate mt-2 max-w-sm mx-auto leading-relaxed">
-                  Thank you, <span className="font-semibold text-bark">{name}</span>! Our lead engineering lab coordinator, Ayush Malhotra, has queued your demo request. We've sent a calendar hold to <span className="font-semibold text-bark">{email}</span>.
+                  Thank you, <span className="font-semibold text-bark">{name}</span>! Our lead engineering lab coordinator, Aayush Malhotra, has queued your demo request. We've sent a calendar hold to <span className="font-semibold text-bark">{email}</span>.
                 </p>
 
 

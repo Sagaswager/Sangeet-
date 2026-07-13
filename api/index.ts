@@ -56,8 +56,8 @@ interface ConsultationRequest {
 const bookings: DemoBooking[] = [
   {
     id: "b-1",
-    name: "Ayush Malhotra",
-    email: "ayushmalhotra1703@gmail.com",
+    name: "Aayush Malhotra",
+    email: "aayushmalhotra1703@gmail.com",
     company: "Intellitech AI Labs",
     agentInterest: "LinkedIn AI Agent",
     notes: "Internal testing demo entry.",
@@ -68,8 +68,8 @@ const bookings: DemoBooking[] = [
 const consultations: ConsultationRequest[] = [
   {
     id: "c-1",
-    name: "Ayush Malhotra",
-    email: "ayushmalhotra1703@gmail.com",
+    name: "Aayush Malhotra",
+    email: "aayushmalhotra1703@gmail.com",
     phone: "+91 9811734477",
     details: "Bespoke system for regional outbound marketing campaign.",
     createdAt: new Date().toISOString(),

@@ -81,9 +81,9 @@ export const siteContent = {
   contact: {
     eyebrow: "Let's connect",
     heading: "Talk to the lab.",
-    email: "ayushmalhotra1703@gmail.com",
+    email: "aayushmalhotra1703@gmail.com",
     phone: "+91 9811734477",
-    base: "South Delhi, Chhatarpur"
+    base: "South Delhi, Chattarpur"
   },
   footer: {
     copyright: "© 2026 Intellitech AI Labs. All rights reserved.",

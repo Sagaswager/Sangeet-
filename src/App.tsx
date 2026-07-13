@@ -72,7 +72,7 @@ export default function App() {
       "[LINKEDIN_AGENT] Personalized invitation compiled for VP of Growth at Stripe.",
       "[VOUCHERS_CONCIERGE] Composite calculation complete: Starbucks 15% + coupon hold.",
       "[LINKEDIN_AGENT] Outbound pipeline updated. Checked 14 profiles.",
-      "[SYSTEM] Routing telemetry report to South Delhi, Chhatarpur office gateway.",
+      "[SYSTEM] Routing telemetry report to South Delhi, Chattarpur office gateway.",
       "[VOUCHERS_CONCIERGE] Curating exclusive 2026 winter deals for Nike store locator.",
       "[LINKEDIN_AGENT] Appointment booked successfully: Friday at 2:00 PM EST.",
       "[SYSTEM] CPU utilization stable. 100% agent operational health.",
@@ -630,7 +630,7 @@ export default function App() {
                         required
                         value={consultName}
                         onChange={(e) => setConsultName(e.target.value)}
-                        placeholder="Ayush Malhotra"
+                        placeholder="Aayush Malhotra"
                         className="w-full bg-bone-mist/50 border border-ash/70 rounded-full px-6 py-4 text-base focus:outline-none focus:border-bark text-bark"
                       />
                     </div>
@@ -643,7 +643,7 @@ export default function App() {
                         required
                         value={consultEmail}
                         onChange={(e) => setConsultEmail(e.target.value)}
-                        placeholder="ayushmalhotra1703@gmail.com"
+                        placeholder="aayushmalhotra1703@gmail.com"
                         className="w-full bg-bone-mist/50 border border-ash/70 rounded-full px-6 py-4 text-base focus:outline-none focus:border-bark text-bark"
                       />
                     </div>
